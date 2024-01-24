@@ -7,6 +7,6 @@ public class Perimeter{
         int a = obj.nextInt();
         int b = obj.nextInt();
         
-        System.out.print(a + b);
+        System.out.print( a  + b);
     }
 }
