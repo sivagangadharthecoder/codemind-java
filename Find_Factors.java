@@ -6,13 +6,14 @@ public class Factors{
         
         int num = sc.nextInt();
         
-        for(int i=1; i<=num; i++)
-        {
-            if(num % i == 0)
-            {
-                System.out.print(i + " ");
+        int i = 1;
+        while(i <= num){
+            
+            if(num % i == 0){
+                System.out.print(i+ " ");
             }
+            
+            i++;
         }
-        
     }
 }
