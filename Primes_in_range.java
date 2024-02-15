@@ -1,40 +1,32 @@
-import java.util.Scanner;
+import java.util.*;
 
-public class Primes {
+public class Primes{
     
-    public static boolean isPrime(int x) {
-        if (x <= 1) {
+    public static boolean IsPrime(int x){
+        if(x <= 1){
             return false;
         }
-        
-        for (int i = 2; i <= Math.sqrt(x); i++) {
-            if (x % i == 0) {
+        int count = 0;
+        for(int i=2; i<x; i++)
+        {
+            if(x % i == 0){
                 return false;
             }
         }
-        
         return true;
     }
-    
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         
         int a = sc.nextInt();
         int b = sc.nextInt();
         
         int count = 0;
-        for (int i = a + 1; i < b; i++) {
-            if (isPrime(i)) {
+        for(int i=a; i<=b; i++){
+            if(IsPrime(i)){
                 count++;
             }
         }
-        
-        if (isPrime(a) && isPrime(b)) {
-            System.out.print(count + 2);
-        } else if (isPrime(a) || isPrime(b)) {
-            System.out.print(count + 1);
-        } else {
-            System.out.print(count);
-        }
+        System.out.print(count);
     }
 }
