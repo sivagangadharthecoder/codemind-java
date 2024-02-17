@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class OddNumber {
     
-    public static int IsEven(int n){
+    public static int IsOdd(int n){
         if(n % 2 == 0){
             return 1;
         }
@@ -13,7 +13,7 @@ public class OddNumber {
         Scanner sc = new Scanner(System.in);
         
         int num = sc.nextInt();
-        int result = IsEven(num);
+        int result = IsOdd(num);
         System.out.print(result);
     }
 }
