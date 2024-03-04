@@ -1,19 +1,15 @@
-import java.util.*;
+import java.util.Scanner;
 
-public class SumOfDigits {
-   
-    public static void main(String[] args) {
+public class Sum{
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         
-        String inputString = sc.nextLine();
+        String str = sc.nextLine();
         
         int sum = 0;
-
-        for (int i = 0; i < inputString.length(); i++) {
-            char c = inputString.charAt(i);
-
-            if (Character.isDigit(c)) {
-                sum += Character.getNumericValue(c);
+        for(int i=0; i<str.length(); i++){
+            if(Character.isDigit(str.charAt(i))){
+                sum += Character.getNumericValue(str.charAt(i));
             }
         }
         
