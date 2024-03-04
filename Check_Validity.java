@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Validity {
     public static void main(String[] args) {
@@ -7,20 +7,34 @@ public class Validity {
         int t = sc.nextInt();
         sc.nextLine();
 
-        for (int j = 0; j < t; j++) {
+        for (int i = 0; i < t; i++) {
             String str = sc.nextLine();
-            int n = str.length();
-            while (n > 0 && str.contains("()") || str.contains("[]") || str.contains("{}")) {
-                str = str.replace("()", "").replace("[]", "").replace("{}", "");
-                n = str.length();
+            boolean flag = false;
+
+            while (true) {
+                int lengthBefore = str.length();
+
+                str = str.replace("()", "");
+                str = str.replace("[]", "");
+                str = str.replace("{}", "");
+
+                int lengthAfter = str.length();
+
+                if (lengthBefore == lengthAfter) {
+                    break;
+                }
             }
-            boolean flag = str.isEmpty(); 
-            if(flag){
-            System.out.println("True");
+
+            if (str.isEmpty()) {
+                flag = true;
             }
-            else{
-            System.out.println("False");
+
+            if (flag) {
+                System.out.println("True");
+            } else {
+                System.out.println("False");
             }
         }
+
     }
 }
