@@ -1,17 +1,16 @@
 import java.util.*;
 
-public class DigitsSum{
+public class Sum{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         
-        int num = sc.nextInt();
+        String num = sc.nextLine();
         
-        String str = Integer.toString(num);
-        char firstChar = str.charAt(0);
-        char secondChar = str.charAt(str.length()-1);
+        char one = num.charAt(0);
+        char two = num.charAt(num.length()-1);
         
-        int first = Character.getNumericValue(firstChar);
-        int second = Character.getNumericValue(secondChar);
+        int first = Character.getNumericValue(one);
+        int second = Character.getNumericValue(two);
         
         System.out.print(first + second);
     }
