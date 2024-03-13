@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class SameCount {
 
-    private static int count(int a[], int n) {
+    private static int count(int a[] , int n){
         int count = 0;
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] == n) {
+        for(int i=0; i<a.length; i++){
+            if(a[i] == n){
                 count++;
             }
         }
@@ -20,22 +20,24 @@ public class SameCount {
         for (int i = 0; i < size; i++) {
             arr[i] = sc.nextInt();
         }
-
-        StringBuilder sb = new StringBuilder();
+        
+        String result = "";
         boolean flag = false;
-        for (int i = 0; i < arr.length; i++) {
-            int element = arr[i];
-            int elementCount = count(arr, element);
-            if (element == elementCount && sb.indexOf(String.valueOf(arr[i])) == -1) {
-                sb.append(arr[i]+" ");
+        for(int i=0; i<arr.length; i++){
+            if(arr[i] == count(arr, arr[i])){
+                if(result.indexOf(String.valueOf(arr[i]))==-1 ){
+                result+= arr[i];
+                result+=" ";
                 flag = true;
             }
+            }
         }
-
-        if (!flag) {
+        if(!flag){
             System.out.print(-1);
-        } else {
-            System.out.print(sb.toString());
         }
+        else{
+            System.out.print(result);
+        }
+        
     }
 }
