@@ -1,26 +1,17 @@
 import java.util.*;
 
 public class Pretty{
-    
-    public static boolean IsRemainder(int x){
-        int rem = x % 10;
-        if(rem == 2 || rem== 3 || rem==9){
-            return true;
-        }
-        return false;
-    }
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         
         int t = sc.nextInt();
-        for(int i=0; i<t; i++){
-            int a = sc.nextInt();
-            int b = sc.nextInt();
+        while(t-->0){
+            int start = sc.nextInt();
+            int end = sc.nextInt();
             
             int count = 0;
-            for(int j=a; j<=b; j++)
-            {
-                if(IsRemainder(j)){
+            for(int i=start; i<=end; i++){
+                if(i%10==2 || i%10==3|| i%10==9){
                     count++;
                 }
             }
