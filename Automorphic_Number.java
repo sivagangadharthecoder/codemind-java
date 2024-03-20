@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class SuperNumber {
+public class AutomorphicNumber {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         
@@ -17,9 +17,8 @@ public class SuperNumber {
         
         int length = count;
         
-        int result = sq % (int)Math.pow(10,count);
-        
-        if(result==num) System.out.println("Automorphic Number");
+        int result = sq % (int)Math.pow(10, count);
+        if(result == num) System.out.println("Automorphic Number");
         else System.out.println("Not an Automorphic Number");
     }
 }
